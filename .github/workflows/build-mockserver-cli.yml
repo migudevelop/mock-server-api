@@ -1,33 +1,33 @@
-name: Build MockServer CLI
+# name: Build MockServer CLI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [19.4.x]
+#     strategy:
+#       matrix:
+#         node-version: [19.4.x]
 
-    steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 8.6.3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - run: pnpm i
-    - run: |
-        pnpm run build
+#     steps:
+#     - uses: actions/checkout@v3
+#     - uses: pnpm/action-setup@v2
+#       with:
+#         version: 8.6.3
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#         cache: 'pnpm'
+#     - run: pnpm i
+#     - run: |
+#         pnpm run build
         # git config user.name mock-server-api-bot
         # git diff --quiet && git diff --staged --quiet || git commit -am "[mock-server-api-bot] create dist app"
         # git push origin main
