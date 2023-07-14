@@ -33,9 +33,10 @@ jobs:
       run: npx tsc
     - run: |
         git status --ignored
-        # git config user.name mock-server-api-bot
-        # git diff --quiet && git diff --staged --quiet || git commit -am "[mock-server-api-bot] create dist app"
-        # git push origin main
+        git config user.name mock-server-api-bot
+        git add -f dist
+        git commit -am "[mock-server-api-bot] create dist filder"
+        git push origin main
         
 
     
