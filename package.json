@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run tsc",
-    "preinstall": "pnpm run tsc",
+    "preinstall": "npx tsc",
     "start": "build && node ./dist/index.js"
   },
   "keywords": [],
