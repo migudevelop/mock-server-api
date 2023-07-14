@@ -6,8 +6,8 @@
   "types": "./dist/index.d.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "pnpm run build && node ./dist/index.js"
+    "build": "pnpm run tsc",
+    "start": "build && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -26,8 +26,12 @@
     "express": "^4.18.2"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
+  "bin": {
+    "mock-server-api": "./dist/index.js"
+  },
   "engines": {
     "node": "19.x",
     "pnpm": "8.6.3"
