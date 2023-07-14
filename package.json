@@ -6,7 +6,7 @@
   "types": "./dist/index.d.js",
   "type": "module",
   "scripts": {
-    "build": "pnpm run tsc",
+    "build": "tsc",
     "start": "build && node ./dist/index.js"
   },
   "keywords": [],
