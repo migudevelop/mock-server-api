@@ -30,7 +30,7 @@
     "bin"
   ],
   "bin": {
-    "mock-server-api": "./dist/index.js"
+    "mock-server-api": "./dist/init.js"
   },
   "engines": {
     "node": "19.x",

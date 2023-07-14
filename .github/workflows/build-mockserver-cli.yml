@@ -32,7 +32,6 @@ jobs:
     - name: build aplication
       run: npx tsc
     - run: |
-        git status --ignored
         git config user.name mock-server-api-bot
         git add -f dist
         git commit -am "[mock-server-api-bot] create dist filder"
